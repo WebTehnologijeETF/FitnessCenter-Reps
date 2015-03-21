@@ -1,0 +1,37 @@
+#zaglavlje{
+background-color: green;
+
+}
+
+#navigacija{
+font-family:Verdana,Geneva,sans-serif;
+	margin:5px;
+	margin-bottom:2px;
+	overflow:hidden;
+
+}
+
+#navigacija li{
+	margin:1px;
+	width:8em;
+	padding:5px;
+	color:#F8F8FF;
+	background-color:#198D19;
+	text-decoration:none;
+	text-align:center;
+	float:left;
+	border:1px solid #0A4705;
+	border-radius:5px;
+}
+
+#navigacija li p.selected{
+	margin:1px;
+	width:8em;
+	padding:1px;
+	color:#F8F8FF;
+	background-color:#198D19;
+	text-decoration:underline;
+	text-align:center;
+	float:left;
+	border-radius:5px;
+}
