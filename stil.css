@@ -18,10 +18,11 @@ vertical-align: -35px;
 	font-style: normal;
 	font-weight:bold;
 	text-decoration:none;
-	padding:5px;
-	margin:2px;
-	margin-bottom:2px;
-	overflow:hidden;
+	padding:0px;
+	margin-top:2px;
+	margin-bottom:15px;
+	float:left;
+	width:100%;
 
 }
 
