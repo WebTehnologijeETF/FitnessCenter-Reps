@@ -1,37 +1,64 @@
 #zaglavlje{
-background-color: green;
+font-family: 'Orbitron', sans-serif;
+background-color: #707070;
+height:200px;
+}
 
+img{
+height: 200px;
 }
 
 #navigacija{
-font-family:Verdana,Geneva,sans-serif;
-	margin:5px;
+	font-family: 'Orbitron', sans-serif;
+	font-style: normal;
+	font-weight:bold;
+	text-decoration:none;
+	padding:5px;
+	margin:2px;
 	margin-bottom:2px;
 	overflow:hidden;
 
 }
 
 #navigacija li{
-	margin:1px;
+	height: 25px;
 	width:8em;
-	padding:5px;
-	color:#F8F8FF;
-	background-color:#198D19;
+	padding:3px;
+	color:#2f3440 ;
+	background-color:#707070 ;
 	text-decoration:none;
 	text-align:center;
 	float:left;
-	border:1px solid #0A4705;
-	border-radius:5px;
+	border-radius:1px;
+	list-style-type:none;
 }
 
 #navigacija li p.selected{
-	margin:1px;
+	margin: 0px;
 	width:8em;
 	padding:1px;
-	color:#F8F8FF;
-	background-color:#198D19;
-	text-decoration:underline;
+	color:#2f3440;
+	background-color:#d9e021;
 	text-align:center;
-	float:left;
-	border-radius:5px;
+	border-radius:1px;
+    cursor: pointer;
+    float: left;
+	height: 25px;
+	padding-top: 0px;
+	text-align:center;
+	padding-bottom: 0px;
+}
+
+#navigacija li a{
+	color: #d9e021;
+	text-decoration:none;
+}
+
+#podnozje{
+	font-family: 'Orbitron', sans-serif;
+	position: fixed;
+    bottom: 0;
+	text-align:center;
+    margin-bottom: 5px;
+    width: 100%;
 }
