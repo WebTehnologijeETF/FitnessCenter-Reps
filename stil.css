@@ -1,3 +1,4 @@
+
 #zaglavlje{
 background-color: #707070;
 color:#d9e021;
@@ -31,12 +32,7 @@ position:relative;
 	border-bottom: solid #d9e021;
 }
 
-/*#navigacija{
-margin:0;
-width:100%;
-border-top: solid #d9e021;
-border-bottom: solid #d9e021;
-}*/
+
 
 #navigacija li{
 	height: 25px;
