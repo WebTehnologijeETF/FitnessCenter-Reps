@@ -41,7 +41,7 @@ vertical-align: -35px;
 #navigacija div{
 	z-index:5;
 	margin-top:10px;
-	transition:0.2s;
+	transition:0.15s;
 	position: absolute;
 	visibility: hidden;
 	background: #d9e021;
