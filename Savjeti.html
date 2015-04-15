@@ -15,12 +15,23 @@
 	</div>
 	<ul id="navigacija">
 			<li><a href="index.html">Home</a></li>
-			<li><a href="Onama.html">O&nbsp;nama</a></li>
+			
+			<li onmouseover="otvori('m1')" onmouseout="zatvori('m1');"><a href="Onama.html" >O&nbsp;nama</a>
+				<div id="m1" onmouseout="zatvori('m1')">
+					<a href="Galerija.html">Galerija</a>
+				</div>	
+			</li>
 			<li><a href="Ponuda.html">Ponuda</a></li>
-			<li><a id="link" href="Savjeti.html">Savjeti</a></li>
+			<li onmouseover="otvori('m2')" onmouseout="zatvori('m2');"><a href="Savjeti.html">Savjeti</a>
+			<div id="m2" onmouseout="zatvori('m2')">
+					<a href="#">Ishrana</a>
+					<a href="#">Trening</a>
+					<a href="#">Suplementi</a>
+				</div>	
+			</li>
 			<li><a href="Linkovi.html">Linkovi</a></li>
 			<li><a href="Kontakt.html">Kontakt</a></li>
-		</ul>
+		</ul>	
 
 		<h3>Znanje prije SVEGA</h3>
 	<div id="podnozje"><p>Made in China...Err made by Emir Hurem</p></div>

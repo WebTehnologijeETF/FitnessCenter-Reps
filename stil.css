@@ -17,6 +17,7 @@ width: 700px;
 vertical-align: -35px;
 }
 
+/*meni*/
 #navigacija{
 	position:relative;
 	margin:0;
@@ -30,12 +31,7 @@ vertical-align: -35px;
 	border-top: solid #d9e021;
 	border-bottom: solid #d9e021;
 }
-/*
-#navigacija #m1:hover, #navigacija li:hover{
-	padding-top:20px;
-	background-color: #d9e021;
-	color: #707070;
-}*/
+
 #navigacija li a:hover{
 	background:#d9e021;
 	color:#2f3440;
@@ -49,7 +45,7 @@ vertical-align: -35px;
 	position: absolute;
 	visibility: hidden;
 	background: #d9e021;
-	border: 1px solid #000000;
+	border: 1px solid #2f3440;
 }
 
 #navigacija div a{
@@ -88,20 +84,6 @@ vertical-align: -35px;
 	float:left;
 }
 
-#navigacija li #link{
-	margin: 2px;
-	width:100%;
-	float:left;
-	padding:1px;
-	color:#2f3440;
-	background-color:#d9e021;
-	text-align:center;
-	border-radius:1px;
-    display:inline-block;
-	height: 25px;
-	padding-top: 0px;	
-	padding-bottom: 2px;
-}
 
 #navigacija li a{
 	height:25px;
@@ -161,6 +143,10 @@ text-align:center;
 	border:2px solid rgba(217,222,60,0.9);
 	}
 	
+	.sadrzaj  img {
+	width:50%;
+	height:50%;
+	}
 	.detalji{
 	margin:5px 5px;
 	padding:5px;
