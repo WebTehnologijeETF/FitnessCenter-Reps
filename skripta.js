@@ -1,63 +1,86 @@
+function validirajFormu(){
+var cek=document.getElementById("cekboks");
+if(!validirajIme() || !validirajPrezime() || !validirajMail() || !validirajKomentar() || !istiMail())
+return false;
 
-function validirajFormu() {
-    var i = document.forms["forma"]["ime"].value;
-    if (i == null || i == "") {
-        alert("Ime prazno!");
-        return false;
-    }
+return true;
+
 }
 
-function samoSlova() { 
-var regex=/[^a-z|^A-Z|^\s]/;
-if(document.getElementById("ime").value.match(regex))
-{
+function samoSlova(pom) { 
+var regex=/^[a-zšđčćž]+$/i;
+if(pom.match(regex))
+return true;
+
 return false;
 }
-if(document.getElementById("prezime").value.match(regex))
-{
-return false;
-}  
-}
 
-function ispravanMail() { 
+function ispravanMail(ref) { 
 var regex=/^\w+@[a-zA-Z_]+?\.[a-zA-Z]{2,3}$/;
-if(document.getElementById("mail").value.match(regex))
+if(ref.match(regex))
 {
-return false;
+return true;
 }
+return false;
 }
   
 function validirajIme(){
-var greskaTekst = document.getElementById('greskaIme');
-greskaTekst.innerHTML="";
-	if(samoSlova()== false){
-		greskaTekst.style.display="inline-block";
-		greskaTekst.style.marginRight="50px";
-		greskaTekst.innerHTML+="<img src='emir logo1.png' id='error'>";
-		greskaTekst.innerHTML+="Slova i razmaci dozvoljeni!";
+	var greskaTekst=document.getElementById("greskaIme");
+	var pom=document.getElementById("ime").value;
+	if(!samoSlova(pom) || pom=="" || pom==null){
+
+		greskaTekst.innerHTML="Neispravno ime!";
+		return false;
 	}
+	greskaTekst.innerHTML="";
+	return true;
 }
 
 function validirajPrezime(){
-var greskaTekst = document.getElementById('greskaPrezime');
-greskaTekst.innerHTML="";
-	if(samoSlova()== false){
-		greskaTekst.style.display="inline-block";
-		greskaTekst.style.marginRight="50px";
-		greskaTekst.innerHTML+="<img src='emir logo1.png' id='error'>";
-		greskaTekst.innerHTML+="Slova i razmaci dozvoljeni!";
+var greskaTekst = document.getElementById("greskaPrezime");
+var pom1=document.getElementById("prezime").value;
+	if(!samoSlova(pom1) || pom1=="" || pom1==null){
+		greskaTekst.innerHTML="Neispravno prezime!";
+		
+		return false;
 	}
+	greskaTekst.innerHTML="";
+	return true;
 }
 
 function validirajMail(){
-var greska = document.getElementById('greskaMail');
-greskaTekst.innerHTML="";
-	if(ispravanMail()== false){
-		greska.style.display="inline-block";
-		greska.style.marginRight="50px";
-		greska.innerHTML+="<img src='emir logo1.png' id='error'>";
-		greska.innerHTML+="Pogresan mail!";
+var greska = document.getElementById("greskaMail1");
+var pom=document.getElementById("mail1").value;
+	if(!ispravanMail(pom)){
+		greska.innerHTML="Neispravan e-mail!";
+		return false;
 	}
+	greska.innerHTML="";
+	return true;
+}
+
+function istiMail(){
+var greska = document.getElementById("greskaMail2");
+var pom1=document.getElementById("mail1").value;
+var pom2=document.getElementById("mail2").value;
+if(pom1!=pom2){
+	greska.innerHTML="Potvrdite e-mail!";
+	return false;
+}
+greska.innerHTML="";
+return true;
+
+}
+
+function validirajKomentar(ref){
+var greska = document.getElementById("greskaKom");
+var pom=document.getElementById("komentar").value;
+	if(ref.value.length<5 || ref.value=="" || ref.value==null){
+		greska.innerHTML="Minimalno 5 karaktera!";
+		return false;
+	}
+	greska.innerHTML="";
+	return true;
 }
 
 function otvori(id){
@@ -70,3 +93,4 @@ function zatvori(id){
 	odabrani.style.visibility="hidden";
 
 }
+

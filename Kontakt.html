@@ -37,29 +37,24 @@
 		<h3> Kontaktirajte nas</h3>
 		<div class="sadrzaj">
 	
-	<form id="forma" onsubmit="return validirajFormu()" METHOD="post" ACTION="mailto:ehurem1@etf.unsa.ba" ENCTYPE="multipart/form-data">
+	<form id="forma">
 	
-	<div class="tekst"> Ime:</div>
-	<input type="text" class="tip"  name="ime" id="ime" onblur="validirajIme();"> <div id="greskaIme"></div>
-	<div class="prazan">  </div>
+	<label for "ime"> Ime </label>
+	<input type="text" class="tip"  name="ime" id="ime" onblur="validirajIme()"> <div id="greskaIme"></div>
 	
-	<div class="tekst"> Prezime:</div>
-	<input type="text" class="tip"  name="prezime" id="prezime" onblur="validirajPrezime();"> <div id="greskaPrezime"></div>
-	<div class="prazan">  </div>
+	<label for "prezime"> Prezime </label>
+	<input type="text" class="tip"  name="prezime" id="prezime" onblur="validirajPrezime()"> <div id="greskaPrezime"></div>
 		
-	<div class="tekst"> E-mail:</div>
-  	<input type="email" class="tip"  name="email" id="mail" onblur="validirajMail();"> <div id="greskaMail"></div>
-	<div class="prazan">  </div>
+	<label for "email1"> E-mail </label>
+  	<input type="email" class="tip"  name="email1" id="mail1" onblur="validirajMail()"> <div id="greskaMail1"></div>
+
+	<label for "email2"> Potvrda e-maila </label>
+  	<input type="email" class="tip"  name="email2" id="mail2" onblur="istiMail()"> <div id="greskaMail2"></div>	
 	
-	<input type="file" class="attachFile"  name="file">
-	<div class="prazan">  </div>
+	<label for "komentar" id="komentar"> Komentar </label>
+	<textarea class="unosteksta" name="komentar" id="komentar" rows="6" cols="1" onblur="validirajKomentar(this)"></textarea> <div id="greskaKom"></div>
 	
-	<div class="tekst"> Poruka:</div>
-	<textarea class="unosteksta" name="poruka" rows="6" cols="1">
-	</textarea>
-	<div class="prazan">  </div>
-	
-	<input class="submit" type="submit" value="Pošalji">
+	<input class="submit" type="submit" onclick="return validirajFormu()" value="Pošalji">
 	<input class="reset" type="reset" value="Reset">
 	</form>
 	

@@ -223,54 +223,48 @@ text-align:center;
 	min-width:50%;
 	}
 	
-	.tekst{
-	position:absolute;
-	float:left;
-	width:10%;
-	max-width:10%;
-	margin:0;
-	font-weight:bold;
-	text-align:left;
-	padding:5px 0;
+	label{
+	display:inline-block;  
+	width: 100px;  
+	margin-right:10px;
+	text-align: right; 
+	padding:10px 0;
+	}
+	
+	
+	#komentar{
+	display:block;
+	}
+	
+	.tip{
+	display:inline-block;
+	}
+	
+	#greskaIme,#greskaPrezime,#greskaMail1, #greskaMail2, #greskaKom{
+	color:red;
+	display:inline-block;
+	text-align:right;
+	width:140px;
+	min-width:140px;
 	white-space:nowrap;
+	padding:5px 0;
 	}
 	
-	#greskaIme{
-	color:red;
+	#greskaKom{
+	display:block;
+	text-align:right;
 	}
-	
-	#greskaPrezime{
-	color:red;
-	
-	}
-	
+		
 	#error{
 	width: 10px;
 	height:10px;
-	
-	}
-	
-	.attachFile{
-	display:block;
-	margin:0 0 0 15%;
-	padding:5px;
-	}
-
-	.tip {
-	position:relative;
-	display:inline-block;
-	width:30%;
-	min-width:30%;
-	margin:0;
-	
-	border:1px solid rgba(0,0,0,0.7);
 	}
 	
 	.unosteksta{
-	position:relative;
-	display:inline-block;
-	margin:0 0 0 15%;
-	width:100%;
+	display:block;
+	width:340px;
+	min-width:340px;
+	position:center;
 	border:1px solid rgba(0,0,0,0.7);
 	}
 
@@ -292,11 +286,6 @@ text-align:center;
 	color:#000000;
 	font-weight:bold;
 	border:1px solid rgba(0,0,0,0.7);
-	}
-	
-	.prazan{
-	display:block;
-	padding:5px;
 	}
 	
 	.unos:hover,.unosteksta:hover,.submit:hover,.reset:hover{
