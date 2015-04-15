@@ -29,11 +29,11 @@
 	<form id="forma" onsubmit="return validirajFormu()" METHOD="post" ACTION="mailto:ehurem1@etf.unsa.ba" ENCTYPE="multipart/form-data">
 	
 	<div class="tekst"> Ime:</div>
-	<input type="text" class="tip"  name="ime" onblur="validirajTekst(this);"> <div id="greskaTekst"></div>
+	<input type="text" class="tip"  name="ime" id="ime" onblur="validirajIme();"> <div id="greskaIme"></div>
 	<div class="prazan">  </div>
 	
 	<div class="tekst"> Prezime:</div>
-	<input type="text" class="tip"  name="prezime">
+	<input type="text" class="tip"  name="prezime" id="prezime" onblur="validirajPrezime();"> <div id="greskaPrezime"></div>
 	<div class="prazan">  </div>
 		
 	<div class="tekst"> E-mail:</div>

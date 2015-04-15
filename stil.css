@@ -18,32 +18,71 @@ vertical-align: -35px;
 }
 
 #navigacija{
-position:relative;
+	position:relative;
 	margin:0;
 	font-style: normal;
 	font-weight:bold;
 	text-decoration:none;
 	padding:0px;
-	margin-top:2px;
 	margin-bottom:2px;
 	float:left;
 	width:100%;
 	border-top: solid #d9e021;
 	border-bottom: solid #d9e021;
 }
+/*
+#navigacija #m1:hover, #navigacija li:hover{
+	padding-top:20px;
+	background-color: #d9e021;
+	color: #707070;
+}*/
+#navigacija li a:hover{
+	background:#d9e021;
+	color:#2f3440;
+}
 
 
+#navigacija div{
+	z-index:5;
+	margin-top:10px;
+	transition:0.2s;
+	position: absolute;
+	visibility: hidden;
+	background: #d9e021;
+	border: 1px solid #000000;
+}
 
-#navigacija li{
+#navigacija div a{
+	display:block;
 	height: 25px;
 	width:8em;
 	padding:3px;
-	color:#2f3440 ;
+	color:#2f3440;
 	background-color:#707070;
 	text-decoration:none;
 	text-align:center;
 	position:relative;
-	/*display:inline-block;*/
+	border-radius:1px;
+	list-style-type:none;
+	float:left;
+}
+
+#navigacija div a:hover{
+	background: #d9e021;
+	color: #2f3440;
+		}
+
+
+#navigacija li {
+	display:block;
+	height: 25px;
+	width:8em;
+	padding:3px;
+	color:#2f3440;
+	background-color:#707070;
+	text-decoration:none;
+	text-align:center;
+	position:relative;
 	border-radius:1px;
 	list-style-type:none;
 	float:left;
@@ -61,10 +100,11 @@ position:relative;
     display:inline-block;
 	height: 25px;
 	padding-top: 0px;	
-	padding-bottom: 0px;
+	padding-bottom: 2px;
 }
 
 #navigacija li a{
+	height:25px;
 	display:block;
 	color: #d9e021;
 	text-decoration:none;
@@ -119,12 +159,6 @@ text-align:center;
 	width:150px;
 	height:auto;
 	border:2px solid rgba(217,222,60,0.9);
-	}
-	
-	.novost img:hover{
-	width:100%;
-	height:100%;
-	transition:0.5s;
 	}
 	
 	.detalji{
@@ -215,7 +249,12 @@ text-align:center;
 	white-space:nowrap;
 	}
 	
-	#greskaTekst{
+	#greskaIme{
+	color:red;
+	}
+	
+	#greskaPrezime{
+	color:red;
 	
 	}
 	
