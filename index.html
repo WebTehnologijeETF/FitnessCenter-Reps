@@ -18,23 +18,24 @@
 		<ul id="navigacija">
 			<li><a href="index.html">Home</a></li>
 			
-			<li onmouseover="otvori('m1')" onmouseout="zatvori('m1');"><a href="Onama.html" >O&nbsp;nama</a>
+			<li onmouseover="otvori('m1')" onmouseout="zatvori('m1');"><a onclick="ucitajStranicu('Onama.html')" >O&nbsp;nama</a>
 				<div id="m1" onmouseout="zatvori('m1')">
-					<a href="Galerija.html">Galerija</a>
+					<a onclick="ucitajStranicu('Galerija.html')">Galerija</a>
 				</div>	
 			</li>
-			<li><a href="Ponuda.html">Ponuda</a></li>
-			<li onmouseover="otvori('m2')" onmouseout="zatvori('m2');"><a href="Savjeti.html">Savjeti</a>
+			<li><a onclick="ucitajStranicu('Ponuda.html')">Ponuda</a></li>
+			<li onmouseover="otvori('m2')" onmouseout="zatvori('m2');"><a onclick="ucitajStranicu('Savjeti.html')">Savjeti</a>
 			<div id="m2" onmouseout="zatvori('m2')">
 					<a href="#">Ishrana</a>
 					<a href="#">Trening</a>
 					<a href="#">Suplementi</a>
 				</div>	
 			</li>
-			<li><a href="Linkovi.html">Linkovi</a></li>
-			<li><a href="Kontakt.html">Kontakt</a></li>
+			<li><a onclick="ucitajStranicu('Linkovi.html')">Linkovi</a></li>
+			<li><a onclick="ucitajStranicu('Kontakt.html')">Kontakt</a></li>
 		</ul>	
 		
+		<div id="glavni_dio">
 		<h3>Novosti</h3>
 		
 		<div class="sadrzaj">
@@ -60,8 +61,10 @@
 		<a href="index.html" class="detalji">Detaljnije...</a></div>
 		
 		</div>
+		</div>
 	
 	<div id="podnozje"><p>Made in China...Err made by Emir Hurem</p></div>
 	<script src="skripta.js"></script>
+	<script src="ucitaj_stranicu.js"></script>
 </BODY>
 </HTML>

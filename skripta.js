@@ -1,6 +1,6 @@
 function validirajFormu(){
 var cek=document.getElementById("cekboks");
-if(!validirajIme() || !validirajPrezime() || !validirajMail() || !validirajKomentar() || !istiMail())
+if(!validirajIme() || !validirajPrezime() || !validirajMail() || !validirajKomentar() || !istiMail() || regijaValidirana==false)
 return false;
 
 return true;
@@ -94,3 +94,33 @@ function zatvori(id){
 
 }
 
+function valjalValuta(){
+return(validirajRegiju());
+}
+
+var regijaValidirana = false;
+
+function validirajRegiju(){
+	var regija=document.getElementById("regija").value
+
+	var req=new XMLHttpRequest();
+
+	req.onreadystatechange=function(){
+		if(req.readyState==4 && req.status==200){
+			var response=JSON.parse(req.responseText);
+			document.getElementById("greskaRegija").innerHTML="";
+			document.getElementById("regija").value=response[0].region;					
+			regijaValidirana=true;
+			return true;	
+		}
+		else if(req.status==404){
+			document.getElementById("greskaRegija").innerHTML="Neispravna regija!";
+			regijaValidirana=false;
+			return false;
+		}	
+	}
+	
+	var url="https://restcountries.eu/rest/v1/region/"+regija;
+	req.open("GET",url,true);
+	req.send();
+}
