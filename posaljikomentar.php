@@ -11,8 +11,8 @@ if ($conn->connect_error) {
     die("Connection failed: " . $conn->connect_error);
 }
 
-$sql = 'INSERT INTO komentar (Id, Vrijeme, Autor, Email, Tekst, Novost )
-VALUES (16, NOW(),'.$_POST["ime"].','.$_POST["email"].','.$_POST["tekst"].','.$_POST["novost"].')';
+$sql = 'INSERT INTO komentar ( Vrijeme, Autor, Email, Tekst, Novost )
+VALUES ( NOW(),'.$_POST["ime"].','.$_POST["email"].','.$_POST["tekst"].','.$_POST["novost"].')';
 
 if ($conn->query($sql) === TRUE) {
     $sql = "UPDATE novost SET Count=Count+1 WHERE id=".$_POST["novost"];

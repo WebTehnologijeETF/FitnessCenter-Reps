@@ -12,8 +12,8 @@ if ($conn->connect_error) {
     die("Connection failed: " . $conn->connect_error);
 }
 
-$sql = 'INSERT INTO novost (Id, Vrijeme, Autor, Naslov, Url, Sazetak, Sadrzaj, Count )
-VALUES (16, NOW(),'.$_POST["autor"].','.$_POST["naslov"].',,'.$_POST["sazetak"].','.$_POST["sadrzaj"].', 0)';
+$sql = 'INSERT INTO novost ( Vrijeme, Autor, Naslov, Url, Sazetak, Sadrzaj, Count )
+VALUES ( NOW(),'.$_POST["autor"].','.$_POST["naslov"].',,'.$_POST["sazetak"].','.$_POST["sadrzaj"].', 0)';
 
 if ($conn->query($sql) === TRUE) {
     include('izlistajnovosti.php');
